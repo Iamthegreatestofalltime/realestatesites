@@ -22,8 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "start-client": "react-scripts start",
+    "build": "react-scripts build && (cd ../backend && npm install)",
     "heroku-postbuild": "npm run build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"

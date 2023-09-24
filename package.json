@@ -1,10 +1,9 @@
 {
   "name": "realestateproject",
   "version": "1.0.0",
-  "description": "",
   "main": "backend/server.js",
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "cd backend && node server.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build",
     "client-start": "cd frontend && npm start",
     "test": "cd frontend && npm run test",
@@ -56,5 +55,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

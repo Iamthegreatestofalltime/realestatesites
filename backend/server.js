@@ -389,17 +389,21 @@ app.post('/api/contact-lister/:homeId', async (req, res) => {
     });
 });
 
-if (process.env.NODE_ENV === 'production') {
     // Set static folder
-    app.use(express.static('frontend/build'));
+app.use(express.static('frontend/build'));
     
     // Catch-all route handler
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-    });
-}
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/build/index.html"),
+    function(err) {
+        if(err) {
+            res.status(500).send(err);
+        }
+    }
+    );
+});
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
