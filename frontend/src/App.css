@@ -1,0 +1,895 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #ffffff;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.backgroundimagesearch{
+  min-width: 100%;
+}
+
+.searchbutton{
+  background-color: rgb(255, 255, 255);
+  border-width: 3px;
+  border: none;
+  border: none;
+  width: 100px;
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  margin-top: 0px;
+  height: 102px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.searchbuttonss{
+  width: 50px;
+  color: #282c34;
+}
+
+.listingimagefront{
+  min-width: 100%;
+  max-width: 100%;
+  margin-left:0%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.Home {
+  background-color: #fbfbfb;
+}
+
+.HomeDetailsOuterContainer {
+  width: 90%;
+  max-width: 2000px;
+  margin: 0 auto;
+  position: relative; /* Keep as is if needed for other purposes */
+}
+
+.HomeDetailsImagesContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+}
+
+.HomeDetailsMainImageContainer {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: grey; /* Grey background */
+  padding-top: 75%; /* 4:3 aspect ratio */
+  position: relative;
+}
+
+.HomeDetailsMainImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.HomeDetailsSubImagesContainer {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-gap: 10px; /* Adjust gap as needed */
+}
+
+.HomeDetailsSubImageContainer {
+  background-color: grey; /* Grey background */
+  padding-top: 75%; /* 4:3 aspect ratio */
+  position: relative;
+}
+
+.HomeDetailsSubImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textdiv{
+  margin-top: 10px;
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+.addresstextstylingdetails{
+  font-size: 25px;
+  margin-top: -20px;
+}
+
+.estpaymenttext {
+  margin-top: -20px;
+  font-size: 20px;
+  background-color: aqua;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.Bedsdetailstext{
+  position: absolute;
+  margin-left: 500px;
+  margin-top: -180px;
+  width: 20px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.detailsprice{
+  font-size: 45px;
+}
+
+.BathsDetailstext{
+  position: absolute;
+  font-size: 40px;
+  margin-left: 800px;
+  margin-top: -180px;
+  font-weight: 500;
+  width: 20px;
+}
+
+.SqftDetailstext{
+  position: absolute;
+  font-size: 40px;
+  margin-left: 1100px;
+  margin-top: -181px;
+  font-weight: 500;
+  width: 20px;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%; /* Adjust this value to match the max-width of your container */
+  gap: 10px; /* Adjust this value to set the space between boxes */
+}
+
+.feature-box {
+  background-color: #f0f0f0; /* Or any other color you prefer */
+  padding: 10px;
+  border: 1px solid #ccc; /* Or any other border style you prefer */
+  border-radius: 4px; /* Optional for rounded corners */
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px; /* Adjust this value to match the max-width of your container */
+  gap: 10px; /* Adjust this value to set the space between boxes */
+}
+
+.feature-box {
+  background-color: #e7e4e4; /* Or any other color you prefer */
+  padding: 10px;
+  border: 1px solid #ccc; /* Or any other border style you prefer */
+  border-radius: 4px; /* Optional for rounded corners */
+}
+
+.descriptiondiv{
+  width: 1000px;
+}
+
+.descriptiontext{
+  font-size: 20px;
+}
+
+.searchbar{
+  width: 700px;
+  height: 100px;
+  font-size: 30px;
+  padding-left: 30px;
+  border: none;
+  border-width: 3px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.homeicon{
+  width: 50px;
+}
+
+.HomePreviewCard {
+  background-color: #ffffff;
+  min-width: 400px;
+  margin-left: 20px;
+  height: 700px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.HomePreviewbackpartdiv{
+  background-color: #fafafa;
+}
+
+.PricePreview{
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.Home{
+  background-color: #ffffff;
+  height: 3000px;
+}
+
+.HomeDetailsCard{
+  background-color: #f2f2f2;
+  min-height:1000px;
+  padding-bottom: 300px;
+}
+
+.ContactFormPopup{
+  position: absolute;
+  background-color: rgb(0, 102, 255);
+  margin-left: 1500px;
+  max-width: 500px;
+  margin-top: 800px;
+  min-height: 600px;
+  border-radius: 10px;
+}
+
+.nameforminput{
+  margin-left: 50px;
+  border: none;
+  height: 30px;
+  margin-top: 35px;
+  padding: 5px;
+  width: 400px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.phoneforminput{
+  margin-left: 50px;
+  border: none;
+  height: 30px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 400px;
+}
+
+.emailforminput{
+  margin-left: 50px;
+  border: none;
+  height: 30px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 400px;
+}
+
+.messageforminput{
+  margin-left: 50px;
+  border: none;
+  height: 150px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 400px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.ContactFormTitle{
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+}
+
+.contactbutton{
+  background-color: white;
+  border: none;
+  width: 410px;
+  margin-left: 50px;
+  margin-top: 20px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.detailstopdiv{
+  background-color: white;
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.homeicondetails{
+  margin-top: 25px;
+  margin-left: 105px;
+  width: 75px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.SellButtonDetails{
+  min-width: 75px;
+  margin-left: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.RentButtonDetails{
+  width: 75px;
+  margin-left: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.savebuttondetails{
+  min-width: 100px;
+  margin-left: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.editlistingdetails{
+  min-width: 100px;
+  margin-left: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.DeleteListingDetails{
+  min-width: 100px;
+  margin-left: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.searchdiv{
+  position: absolute;
+  margin-top: -300px;
+  left: 30%;
+  font-size: 25px;
+  z-index: 0;
+}
+
+.home-preview-container {
+  padding-left: 50px;
+  margin: auto;
+  width: 1500px;
+  height: 740px;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  overflow: hidden; /* Hide the scrollbar */
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(136, 136, 136, 1) transparent; /* For Firefox */
+}
+
+/* For Webkit browsers like Chrome/Safari */
+.scroll-container::-webkit-scrollbar {
+  height: 12px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(136, 136, 136, 1);
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Hide scrollbar track */
+}
+
+.scroll-container::-webkit-scrollbar-button {
+  display: none; /* Hide scrollbar buttons */
+}
+
+.logout-area {
+  position: absolute;
+  margin-left: 1300px;
+  margin-top: 80px;
+  font-size: 20px;
+}
+
+.profile-button, .profile-dropdown {
+  display: inline-block;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;  /* This will align the dropdown to the right edge of the profile-button */
+  top: 100%;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 0; /* Ensures no gap */
+}
+
+.logout-area:hover .profile-dropdown {
+  display: block;
+}
+
+/* styles.css or your relevant stylesheet */
+
+.search-results {
+  display: grid;
+  grid-gap: 20px; /* spacing between items, adjust as needed */
+  grid-template-columns: 1fr; /* default to mobile view with 1 column */
+  max-width: 90%;
+  margin-top: 10px;
+  margin-left: 90px;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .search-results {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  }
+}
+
+.HomeCardText{
+  padding: 20px;
+}
+
+.optionssection{
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  height: 900px;
+}
+
+.serviceimages{
+  width: 600px;
+  margin-top: 40px;
+}
+
+.buyhomeservicediv{
+  position: absolute;
+  background-color: white;
+  width: 600px;
+  height: 750px;
+  margin-left: 320px;
+  margin-top: 70px;
+  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.sellservicediv{
+  position: absolute;
+  max-width: 600px;
+  margin-top: 70px;
+  height: 750px;
+  margin-left: 1240px;
+  background-color: white;
+  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.servicetextdiv{
+  margin-top: -60px;
+  padding: 70px;
+  text-align: center;
+}
+
+.ServiceMainText{
+  font-size: 50px;
+}
+
+.ServiceSubText{
+  font-size: 20px;
+}
+
+.servicebuttons{
+  background-color: transparent;
+  color: blue;
+  border-color: blue;
+  border-radius: 3px;
+  border-width: 2px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.buyhomeservicediv,
+.sellservicediv {
+    transition: all 0.3s ease; /* Add this line for a smooth effect */
+}
+
+.buyhomeservicediv:hover,
+.sellservicediv:hover {
+    transform: scale(1.05); /* Makes the div slightly grow when hovered */
+}
+
+.buyhomeservicediv:hover .servicebuttons,
+.sellservicediv:hover .servicebuttons {
+    background-color: blue;
+    color: white;
+}
+
+.customerreviews{
+  background-color: rgb(255, 255, 255);
+  height: 1000px;
+}
+.stars{
+  color: #f1e907;
+  text-align: center;
+  font-size: 30px;
+}
+
+.reviewimage{
+  width: 450px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.reviewTitle{
+  text-align: center;
+}
+
+.review1{
+  width: 450px;
+  background-color: #fbfbfb;
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 200px;
+  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 690px;
+}
+
+.review2{
+  width: 450px;
+  background-color: #fbfbfb;
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 840px;
+  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 690px;
+}
+
+.review3{
+  width: 450px;
+  background-color: #fbfbfb;
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 1500px;
+  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 690px;
+}
+
+.noimagereview{
+  padding: 15px;
+}
+
+.reviewstext{
+  text-align: center;
+}
+
+.reviewsTitlePage{
+  text-align: center;
+  font-size: 50px;
+}
+
+.instalogo{
+  width: 50px;
+  margin: 10px;
+}
+
+.facelogo{
+  width: 50px;
+  margin: 10px;
+}
+
+.tiktoklogo{
+  width: 50px;
+  margin: 10px;
+}
+
+.xlogo{
+  width: 50px;
+  margin: 10px;
+}
+
+.socialstitle{
+  text-align: center;
+  font-size: 20px;
+}
+
+.socialsdiv{
+  margin-left: 925px;
+  margin-top: 50px;
+  position: absolute;
+  width: 280px;
+  height: 200px;
+}
+
+.socialssection{
+  background-color: #fafafa;
+  height: 300px;
+}
+
+.NavDiv{
+  height: 197px;
+}
+
+.Logo{
+  position: absolute;
+  width: 350px;
+  margin-left: 900px;
+}
+
+.SellButton{
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  margin-top: 80px;
+  margin-left: 600px;
+}
+
+.RentButton{
+  background-color: white;
+  font-size: 20px;
+  border: none;
+  margin-left: 100px;
+}
+
+.pricelisting{
+  position: absolute;
+  margin-top: 70px;
+  font-size: 20px;
+  margin-left: -300px;
+}
+
+.pricefield{
+  font-size: 15px;
+}
+
+.AddHomeDiv{
+  padding-left: 50px;
+  padding-bottom: 100px;
+  padding-right: 50px;
+}
+
+.bathslisting{
+  position: absolute;
+  margin-left: -300px;
+  margin-top: 110px;
+}
+
+.bedslisting{
+  position: absolute;
+  margin-left: -300px;
+  margin-top: 150px;
+}
+
+.squarefeetlisting{
+  position: absolute;
+  margin-left: -300px;
+  margin-top: 190px;
+}
+
+.featureslisting{
+  position: absolute;
+  margin-top: 180px;
+  margin-left: 800px;
+}
+
+.descriptionlisting{
+  position: absolute;
+  margin-left: -300px;
+  margin-top: 210px;
+}
+
+.addresslisting{
+  position: absolute;
+  margin-left: -300px;
+  margin-top: 670px;
+}
+
+.zipcodelisting{
+  position: absolute;
+  margin-left: -300px;
+  margin-top: 710px;
+}
+
+.citylisting{
+  position: absolute;
+  margin-left: -300px;
+  margin-top: 750px;
+}
+
+.buttonlisting{
+  position: absolute;
+  margin-top: 800px;
+  margin-left: -300px;
+}
+
+.descriptiontextlisting{
+  width: 700px;
+  height: 300px;
+}
+
+.locationlisting{
+  position: absolute;
+  margin-top: 590px;
+  margin-left: 5px;
+}
+
+.informationlisting{
+  position: absolute;
+  margin-top: 5px;
+}
+
+.homebuttonlistingform{
+  margin-left: 45px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.createdlistingsprofile {
+  width: 600px;
+  height: 800px;
+}
+
+.savedlistingsprofile {
+  width: 600px;
+  height: 800px;
+}
+
+.createdlistingsprofileholder {
+  width: 1000px;
+}
+
+.listings-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 16px;  /* optional: adds some space between listings */
+  justify-content: space-between;  /* optional: spreads the listings apart */
+}
+
+.listing-item {
+  flex: 1 1 30%;  /* allows the listings to take up 30% of the container's width */
+  max-width: 30%;  /* sets a max-width to go along with the flex property */
+  transition: transform 0.3s;  /* this will make the grow effect smooth */
+}
+
+.listing-item:hover {
+  transform: scale(1.05);  /* this will make the listing 5% larger when hovered over */
+}
+
+.UserProfileHomeButton{
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  margin-left: 520px;
+}
+
+.ProfileTitles{
+  margin-left: 70px;
+}
+
+.loginpage{
+  background-color: lightblue;
+  height: 100vh;
+}
+
+.logindivstuff{
+  background-color: rgb(109, 195, 224);
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  margin-left: 850px;
+  margin-top: 300px;
+}
+
+.UsernameField{
+  height: 30px;
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 40px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.emailfieldregister{
+  height: 30px;
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 40px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.passwordfieldregister{
+  height: 30px;
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 40px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.registerloginbutton{
+  height: 40px;
+  border: none;
+  background-color: blue;
+  color: white;
+  margin-left: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+  width: 310px;
+  padding: 10px;
+}
+
+.switchbutton {
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+}
+
+.registerswitchloginstuff{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loginregistertitletext{
+  text-align: center;
+}
