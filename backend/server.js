@@ -12,9 +12,17 @@ const path = require('path');  // Add this line
 
 const app = express();
 
+const fs = require('fs');
+
+// Ensure uploads directory exists
+const uploadDir = './uploads';
+if (!fs.existsSync(uploadDir)){
+    fs.mkdirSync(uploadDir);
+}
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './uploads/');
+        cb(null, uploadDir);
     },
     filename: function (req, file, cb) {
         cb(null, Date.now() + '-' + file.originalname);
@@ -40,9 +48,9 @@ const User = mongoose.model('User', UserSchema);
 
 app.use('/uploads', express.static('uploads'));
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
-app.use(bodyParser.json());
-app.use(bodyParser.json({ limit: '5000mb' }));
-app.use(bodyParser.urlencoded({ limit: '5000mb', extended: true }));
+app.use(express.json());
+app.use(express.json({ limit: '5000mb' }));
+app.use(express.urlencoded({ limit: '5000mb', extended: true }));
 
 const JWT_SECRET = 'someRandomSecret';
 
