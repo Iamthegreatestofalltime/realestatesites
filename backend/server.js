@@ -390,7 +390,7 @@ app.post('/api/contact-lister/:homeId', async (req, res) => {
 });
 
     // Set static folder
-app.use(express.static('frontend/build'));
+app.use(express.static('../frontend/build'));
     
     // Catch-all route handler
 app.get('/*', (req, res) => {
