@@ -19,8 +19,8 @@ export default function RegisterAndLoginForm() {
         : { username, password };  // keep as is for login
 
         const url = isLoginOrRegister === 'register' 
-            ? 'http://localhost:5000/register' 
-            : 'http://localhost:5000/login';
+            ? 'https://myrealestatesite-7ca87f3d6001.herokuapp.com/register' 
+            : 'https://myrealestatesite-7ca87f3d6001.herokuapp.com/login';
 
         try {
             const response = await axios.post(url, payload);

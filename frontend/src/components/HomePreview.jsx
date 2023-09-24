@@ -6,7 +6,7 @@ function HomePreview() {
 
     useEffect(() => {
         // Fetching the first 10 homes
-        fetch("http://localhost:5000/api/homes?limit=10")
+        fetch("https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/homes?limit=10")
             .then(res => res.json())
             .then(data => setHomes(data))
             .catch(err => console.error("Error fetching homes:", err));

@@ -24,7 +24,7 @@ function UserProfile() {
     useEffect(() => {
         if (userId) {
             // Fetch user's listings
-            fetch(`http://localhost:5000/api/homes?userId=${userId}`)
+            fetch(`https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/homes?userId=${userId}`)
                 .then(res => res.json())
                 .then(data => {
                     setHomes(data);
@@ -32,7 +32,7 @@ function UserProfile() {
                 .catch(err => console.error("Error fetching homes:", err));
 
             // Fetch user's saved listings
-            fetch(`http://localhost:5000/api/saved-listings`, {
+            fetch(`https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/saved-listings`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('authToken')}`
                 }

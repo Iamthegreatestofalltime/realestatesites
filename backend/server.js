@@ -47,7 +47,7 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model('User', UserSchema);
 
 app.use('/uploads', express.static('uploads'));
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors({ origin: 'https://myrealestatesite-7ca87f3d6001.herokuapp.com', credentials: true }));
 app.use(express.json());
 app.use(express.json({ limit: '5000mb' }));
 app.use(express.urlencoded({ limit: '5000mb', extended: true }));

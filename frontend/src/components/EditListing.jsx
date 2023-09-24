@@ -10,7 +10,7 @@ function EditListing() {
     useEffect(() => {
         const fetchHomeDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/homes/${homeId}`);
+                const response = await axios.get(`https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/homes/${homeId}`);
                 setHome(response.data);
             } catch (error) {
                 console.error('Error fetching home details:', error.message);

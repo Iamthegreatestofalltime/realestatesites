@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import '../App.css';
 
 function HomeCard({ home, className }) {
-    const imageUrl = home.images && home.images[0] ? `http://localhost:5000/${home.images[0]}` : ''; // Defaulting to the first image
+    const imageUrl = home.images && home.images[0] ? `https://myrealestatesite-7ca87f3d6001.herokuapp.com/${home.images[0]}` : ''; // Defaulting to the first image
 
     return (
         <div className={`HomePreviewCard ${className}`}>

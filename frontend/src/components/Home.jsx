@@ -17,7 +17,7 @@ function Home() {
         console.log("button submitted");
     
         try {
-            const response = await axios.get(`http://localhost:5000/api/search?q=${search}`);
+            const response = await axios.get(`https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/search?q=${search}`);
             console.log("we in the try frontend block");
             setHomes(response.data); // With axios, you can directly access .data
         } catch (err) {

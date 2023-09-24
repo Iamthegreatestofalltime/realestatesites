@@ -75,14 +75,14 @@ function ListingForm({ home, homeId }) {
         },
       };
       try {
-        const response = await axios.put(`http://localhost:5000/api/homes/${homeId}`, formData, config);
+        const response = await axios.put(`https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/homes/${homeId}`, formData, config);
         console.log('Attempting to upload image: works');
         console.log('Home updated:', response.data);
       } catch (error) {
         console.error('Error updating home:', error.message);
       }
      } else {
-      axios.post('http://localhost:5000/addhome', formData, {
+      axios.post('https://myrealestatesite-7ca87f3d6001.herokuapp.com/addhome', formData, {
           headers: {
               'Content-Type': 'multipart/form-data',
               'Authorization': `Bearer ${token}`

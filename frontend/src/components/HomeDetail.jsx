@@ -28,7 +28,7 @@ function HomeDetail() {
     const handleContactSubmit = e => {
         e.preventDefault();
         console.log("Submitting contact details:", contactDetails);
-        axios.post(`http://localhost:5000/api/contact-lister/${id}`, contactDetails, {
+        axios.post(`https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/contact-lister/${id}`, contactDetails, {
             headers: { /* any headers if needed */ }
         }).then(response => {
             console.log("Response from server:", response.data);
@@ -52,7 +52,7 @@ function HomeDetail() {
     // Update functions to modify the isSaved state after action
     const saveListing = () => {
         const token = localStorage.getItem('authToken');
-        axios.post('http://localhost:5000/api/save-listing', { listingId: id }, {
+        axios.post('https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/save-listing', { listingId: id }, {
             headers: { 'Authorization': `Bearer ${token}` }
         })
         .then(() => {
@@ -64,7 +64,7 @@ function HomeDetail() {
 
     const unsaveListing = () => {
         const token = localStorage.getItem('authToken');
-        axios.delete(`http://localhost:5000/api/unsave-listing/${id}`, {
+        axios.delete(`https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/unsave-listing/${id}`, {
             headers: { 'Authorization': `Bearer ${token}` }
         })
         .then(() => {
@@ -87,7 +87,7 @@ function HomeDetail() {
     const currentUserId = getUserIdFromToken();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/homes/${id}`)
+        axios.get(`https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/homes/${id}`)
             .then(response => {
                 setHome(response.data);
             })
@@ -99,7 +99,7 @@ function HomeDetail() {
     const handleDelete = () => {
         const token = localStorage.getItem('authToken');
     
-        axios.delete(`http://localhost:5000/api/homes/${id}`, {
+        axios.delete(`https://myrealestatesite-7ca87f3d6001.herokuapp.com/api/homes/${id}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -184,12 +184,12 @@ function HomeDetail() {
             <div className="HomeDetailsOuterContainer">
                 <div className="HomeDetailsImagesContainer">
                     <div className="HomeDetailsMainImageContainer">
-                        <img className="HomeDetailsMainImage" src={`http://localhost:5000/${home.images[0]}`} alt="Main Home" />
+                        <img className="HomeDetailsMainImage" src={`https://myrealestatesite-7ca87f3d6001.herokuapp.com/${home.images[0]}`} alt="Main Home" />
                     </div>
                     <div className="HomeDetailsSubImagesContainer">
                         {home.images.slice(1, 5).map((img, index) => (
                             <div key={index} className="HomeDetailsSubImageContainer">
-                                <img className="HomeDetailsSubImage" src={`http://localhost:5000/${img}`} alt={`Home ${index + 1}`} />
+                                <img className="HomeDetailsSubImage" src={`https://myrealestatesite-7ca87f3d6001.herokuapp.com/${img}`} alt={`Home ${index + 1}`} />
                             </div>
                         ))}
                     </div>
